@@ -16,7 +16,7 @@ export default function Navbar(props) {
         </li>
        
         <li className="nav-item">
-          <a className={`nav-link text-${props.mode==='light' ? "black" :'light'}`} href="/NumberChanger.js">Number Change</a>
+          <a className={`nav-link text-${props.mode==='light' ? "black" :'light'}`} href="/">Number Change</a>
         </li>
       </ul>
       <div className="form-check form-switch ">
