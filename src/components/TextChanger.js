@@ -6,8 +6,8 @@ export default function TextChanger(props) {
    const upperCase=()=>{
     let newText = text.toUpperCase();
     setText(newText);
-    setCopy('Copy Text')
-    
+    setCopy('Copy Text');
+    props.showMsg("Converted to Upper Case", "success");
    }
    const lowerCase=()=>{
     let newText = text.toLowerCase();

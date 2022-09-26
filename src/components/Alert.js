@@ -1,12 +1,16 @@
 import React from 'react'
 
 export default function Alert(props) {
+    const capatilize=(word)=>{
+        const lower = word.toLowerCase();
+        return lower.charAt(0).toUpperCase() + lower.slice(1);
+    }
   return (
-    <div>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  {props.alert}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   
+     props.alert && <div class={`alert alert-${props.alert.mode} alert-dismissible fade show width-100" role="alert`}>
+  <strong> {capatilize(props.alert.mode)}</strong> {props.alert.msg}
+ 
 </div>
-    </div>
+   
   )
 }
