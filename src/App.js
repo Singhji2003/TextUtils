@@ -9,7 +9,6 @@ const toogleMode = ()=>{
   if(mode==='light'){
     setMode('dark');
     document.body.style.backgroundColor = '#212529';
-    
     showMsg("Dark Mode Enabled!!", "success")
 
   }
