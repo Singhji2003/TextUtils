@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-
 export default function TextChanger(props) {
     const [text, setText] = useState("");
     const [copy, setCopy] = useState("Copy Text");
@@ -7,7 +6,6 @@ export default function TextChanger(props) {
     let newText = text.toUpperCase();
     setText(newText);
     setCopy('Copy Text');
-    props.showMsg("Converted to Upper Case", "success");
    }
    const lowerCase=()=>{
     let newText = text.toLowerCase();
@@ -19,6 +17,7 @@ export default function TextChanger(props) {
     var text = document.getElementById('exampleFormControlTextarea1');
     navigator.clipboard.writeText(text.value);
     setCopy('Copied!');
+
   }
    const handler=(event)=>{
     setText(event.target.value);
