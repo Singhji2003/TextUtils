@@ -25,14 +25,14 @@ const showMsg = (msg, mode)=>{
   })
   setTimeout(() => {
     setMsg(null);
-  }, 4000);
+  }, 3000);
 }
   return (
    <div>
 <Navbar title = "Text Utils" mode = {mode} toogleMode = {toogleMode}/>
   <Alert alert = {msg}/>
 <div className="container">
-  <TextChanger mode = {mode}/>
+  <TextChanger showMsg = {showMsg} mode = {mode}/>
 </div>
 </div>
    

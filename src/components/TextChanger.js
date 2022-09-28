@@ -6,17 +6,21 @@ export default function TextChanger(props) {
     let newText = text.toUpperCase();
     setText(newText);
     setCopy('Copy Text');
+    props.showMsg("Coverted to Upper Case!!", "success")
    }
    const lowerCase=()=>{
     let newText = text.toLowerCase();
     setText(newText);
     setCopy('Copy Text')
+    props.showMsg("Coverted to Lower Case!!", "success")
 
    }
   const copyText=()=>{
     var text = document.getElementById('exampleFormControlTextarea1');
     navigator.clipboard.writeText(text.value);
     setCopy('Copied!');
+    props.showMsg("Text Copied!", "success")
+
 
   }
    const handler=(event)=>{
