@@ -2,6 +2,7 @@ import { useState } from "react";
 import TextChanger from "./components/TextChanger";
 import Navbar from "./components/Navbar";
 import Alert from "./components/Alert";
+
 function App() {
 const [mode, setMode] = useState('light');
 const [msg, setMsg] = useState(null);
@@ -34,8 +35,9 @@ const showMsg = (msg, mode)=>{
 <div className="container">
   <TextChanger showMsg = {showMsg} mode = {mode}/>
 </div>
+
 </div>
-   
+  
   );
 }
 

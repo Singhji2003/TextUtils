@@ -19,7 +19,7 @@ export default function TextChanger(props) {
     var text = document.getElementById('exampleFormControlTextarea1');
     navigator.clipboard.writeText(text.value);
     setCopy('Copied!');
-    props.showMsg("Text Copied!", "success")
+    props.showMsg("Text Copied!!", "success")
 
 
   }
@@ -28,15 +28,27 @@ export default function TextChanger(props) {
     setCopy('Copy Text')
 
    }
+   const clearText =() =>{
+    var text = '';
+    setText(text);
+    props.showMsg("Text Cleared!!", "success")
+   }
+   const removeSpace = ()=>{
+    var newString = text.replace(/\s{2,}/g, ' ').trim();
+    setText(newString);
+    props.showMsg("Removed ExtraSpaces!!", "success")
+   }
    
   return (
     <div>
         <h2 className={`text-${props.mode==='light' ? "black" :'light'}`}>Enter the text here</h2>
       <div className="mb-3">
   <textarea className={`form-control text-${props.mode==='light' ? 'black' :'light'}` } value={text} style = {{backgroundColor: props.mode==='light' ? "white" :'#212529' }} onChange={handler} id="exampleFormControlTextarea1" rows="5"></textarea>
-  <button  type="button" onClick={upperCase} className="btn btn-info my-2">Convert to Upper Case</button>
-  <button type="button" onClick={lowerCase} className="btn btn-info mx-3 my-2">Convert to Lower Case</button>
-  <button type="button" onClick={copyText} className="btn btn-info mx-3 my-2">{copy}</button>
+  <button disabled = {text.length===0} type="button" onClick={upperCase} className="btn btn-info my-2">Convert to Upper Case</button>
+  <button disabled = {text.length===0} type="button" onClick={lowerCase} className="btn btn-info mx-3 my-2">Convert to Lower Case</button>
+  <button disabled = {text.length===0} type="button" onClick={clearText} className="btn btn-info mx-3 my-2">Clear Text</button>
+  <button disabled = {text.length===0} type="button" onClick={removeSpace} className="btn btn-info mx-3 my-2">Remove Extra Spaces</button>
+  <button disabled = {text.length===0} type="button" onClick={copyText} className="btn btn-info mx-3 my-2">{copy}</button>
  
 </div>
     <h2 className={`text-${props.mode==='light' ? "black" :'light'}`} >Details about words</h2>
