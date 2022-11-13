@@ -1,0 +1,28 @@
+.form-label{
+    font-size: 26px;
+    display: flex;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+#text{
+    display: flex;
+    margin-left: 20vw;
+    width: 600px;
+}
+#upper, #lower, #copy, #remove, #rem{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin-left: 20vw;
+    margin-top: 10px;
+}
+#lower{
+    margin-left: 18vw;
+}
+#upper:hover{
+    background-color: white;
+    color: black;
+}

@@ -1,8 +1,13 @@
 import Navbar from "./components/Navbar";
-
+import Textarea from "./components/Textarea";
 function App() {
   return(
-<Navbar/>
+    <>
+<Navbar title = "Text Utils"/>
+<div className="container">
+<Textarea/>
+</div>
+</>
   );
 }
 
