@@ -8,10 +8,10 @@ export default function Navbar(props) {
       <div>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
   <div className="container-fluid">
-  <a className="navbar-brand" href="/">
+  <link className="navbar-brand" to="/">
       <img src="https://imgs.search.brave.com/bIILt83rOwJdLzzwJgSBpKyKpO_C8Ae8oLAvZ6_-ctM/rs:fit:100:100:1/g:ce/aHR0cHM6Ly9kb3du/bG9hZC5jbmV0LmNv/bS9hL2ltZy9jYXRh/bG9nLzIwMTcvMTEv/MTQvZDg5NWUxYWMt/ZGIwMi00NDBmLWE2/NjItMzBiNDE0YzQy/NTRkL2ljb25pbWc2/NTA3Ni5wbmc" alt="Logo" width="30" height="30" className="d-inline-block align-text-top mx-2"/>
       {props.title}
-    </a>
+    </link>
     <div class="form-check form-switch">
   <input class="form-check-input" onClick={props.toogleMode} type="checkbox" role="switch" id="check"/>
   <label class={`form-check-label text-${props.mode==="light"?"dark":"light"}`} for="check">{`${capatlize(props.mode)} mode`}</label>
@@ -22,14 +22,14 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item mx-3">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
+          <link className="nav-link active" aria-current="page" to="/">Home</link>
         </li>
-        <li className="nav-item mx-3">
-          <a className="nav-link" href="/">About</a>
-        </li>
-        <li className="nav-item mx-3">
-          <a className="nav-link" href="/">Contact</a>
-        </li>
+        <link className="nav-item mx-3">
+          <link className="nav-link" to="/about">About</link>
+        </link>
+        <link className="nav-item mx-3">
+          <link className="nav-link" to="/">Contact</link>
+        </link>
       </ul>
       
       <form className="d-flex" role="search">

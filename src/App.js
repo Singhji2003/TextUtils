@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
+import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from "./components/Navbar";
 import Textarea from "./components/Textarea";
+
 function App() {
   const [alert, setAlert] = useState(null)
   const [mode, setMode] = useState("light")
@@ -28,7 +30,6 @@ function App() {
 <div className="container">
 <Textarea showAlert = {showAlert} mode = {mode} />
 </div>
-
 </>
   );
 }
